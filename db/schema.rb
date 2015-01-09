@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150109090128) do
+ActiveRecord::Schema.define(:version => 20150109112125) do
+
+  create_table "cat_types", :force => true do |t|
+    t.string   "name"
+    t.text     "origin"
+    t.text     "speciality"
+    t.integer  "recipe_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "cat_types", ["recipe_id"], :name => "index_cat_types_on_recipe_id"
 
   create_table "recipes", :force => true do |t|
     t.string   "title"
