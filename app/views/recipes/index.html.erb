@@ -1,0 +1,5 @@
+
+<%= link_to 'Create Dish', new_recipe_path%></br></br>
+<% @recipes.each do |recipe|%>
+	<%= link_to recipe.title, recipe_path(recipe.id)%></br></br>
+<%end%>

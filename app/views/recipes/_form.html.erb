@@ -1,0 +1,28 @@
+<table>
+<%= form_for @recipe do |f|%>
+	<tr>
+	<td><%= f.label :title %></td>
+	<td><%= f.text_field :title %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :description %></td>
+	<td><%= f.text_field :description%></td>
+	</tr>
+	<tr>
+	<td><%= f.label :ingredients %></td>
+	<td><%= f.text_field :ingredients %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :category %></td>
+	<td><%= f.text_field :category %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :price %></td>
+	<td><%= f.text_field :price %></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><%= f.submit  button_name%></td>
+	</tr>
+<%end%>
+</table>

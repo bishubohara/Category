@@ -1,0 +1,13 @@
+
+<b>
+	Title:	<%= @recipe.title%></br></br>
+	Description:	<%= @recipe.description%></br></br>
+	Ingredients:	<%= @recipe.ingredients%></br></br>
+	Category:	<%= @recipe.category%></br></br>
+	Price:	 <%= @recipe.price%></br>
+</b>
+</br></br>
+<%= link_to 'Back', recipes_path%>	
+<%= link_to 'Edit', edit_recipe_path(@recipe)%>
+<%= link_to 'Delete', recipe_path(@recipe), method: 'delete'%>
+
