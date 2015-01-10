@@ -3,7 +3,7 @@
 	Title:	<%= @recipe.title%></br></br>
 	Description:	<%= @recipe.description%></br></br>
 	Ingredients:	<%= @recipe.ingredients%></br></br>
-	Category:	<%= @recipe.category%></br></br>
+	Category:	<%= @recipe.cat_types.map(&:name).join(',')%></br></br>
 	Price:	 <%= @recipe.price%></br>
 </b>
 </br></br>

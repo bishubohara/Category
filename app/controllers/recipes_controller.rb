@@ -10,7 +10,15 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipe = Recipe.new(params[:recipe])
+		recipe = params[:recipe]
+		category = recipe.delete(:category)
+		cat_type = CatType.where(name: category).first
+		unless cat_type
+			cat_type = CatType.create(name: category)
+		end
+
+		@recipe = Recipe.new(recipe)
+		@recipe.cat_types << cat_type
 		if @recipe.save
 			redirect_to recipes_path
 		else
