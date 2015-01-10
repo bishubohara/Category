@@ -1,4 +1,4 @@
 class CatType < ActiveRecord::Base
-  has_and_belongs_to_many :recipe
+  has_and_belongs_to_many :recipes
   attr_accessible :name, :origin, :speciality
 end

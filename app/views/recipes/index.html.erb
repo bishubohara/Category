@@ -1,5 +1,18 @@
 
 <%= link_to 'Create Dish', new_recipe_path%></br></br>
-<% @recipes.each do |recipe|%>
-	<%= link_to recipe.title, recipe_path(recipe.id)%></br></br>
-<%end%>
+
+<span>Available Dishes :</span>  <br><br>
+
+ <% @recipes.each do |recipe|%>
+ <%= link_to recipe.title, recipe_path(recipe.id)%></br></br>
+ <%end%>
+ 
+
+
+ </br>
+ <span>Categories List :</span> <br><br>
+
+ <% @categories.each do |category| %>
+ 	<%= link_to category.name, cat_type_path(category)%>
+ 	</br></br>
+ <% end %>

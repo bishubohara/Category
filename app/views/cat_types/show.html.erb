@@ -1,0 +1,7 @@
+<h3>
+	<%= @category.name%>
+</h3>
+<h5> Recipes </h5>
+<% @recipes.each do |recipe| %>
+	<%= recipe.title %>
+<% end %>

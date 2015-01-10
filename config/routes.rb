@@ -12,6 +12,7 @@ Dish::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :recipes
+  resources :cat_types
 
 
   # Sample resource route with options:

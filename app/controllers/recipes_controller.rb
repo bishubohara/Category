@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
 
 	def index
 		@recipes = Recipe.all
+		@categories = @recipes.map(&:cat_types).flatten
 	end
 
 	def new	
